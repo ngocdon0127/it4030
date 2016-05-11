@@ -1,7 +1,3 @@
-*.*
-*
-!*.cpp
-!*.h
-!*.md
-!.gitignore
-!input*.txt
+output*.txt
+mpi-merge-sort
+merge-sort
