@@ -14,6 +14,7 @@ Integrate parallel computing in merge sort algorithm
 ### Input in file: [input-merge-sort.txt](https://github.com/ngocdon0127/it4030/blob/master/input-merge-sort.txt)
 - The first line contains a number n - number of integer elements in array
 - The next n lines, each line contains 1 array elements
+
 ### Generete input
 You can generate an array with 10000 random integer elements by running:
 
@@ -30,4 +31,5 @@ Run merge sort in 4 cores
 
 ## Output
 By changing OUTPUT constant from 0 to 1, you can write sorted array to file.
+
 The name of output file is declared in [mpi-merge-sort.cpp](https://github.com/ngocdon0127/it4030/blob/master/mpi-merge-sort.cpp#L16)
