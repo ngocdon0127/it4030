@@ -6,6 +6,15 @@
 #include "Timer.h"
 #include "Timer.cpp"
 
+// change this constant to 1 to write sorted array to file.
+const int OUTPUT = 0;
+
+//name of input file
+char fi[] = "input-merge-sort.txt";
+
+// name of output file
+char fo[] = "output-merge-sort-mpi.txt";
+
 
 int printArray(int*, int);
 int output(int*, int);
@@ -26,7 +35,7 @@ int main(int argc, char **argv){
 	int n = 0;
 	int *a;
 
-	FILE *f = fopen("input-merge-sort.txt", "r");
+	FILE *f = fopen(fi, "r");
 	if (!f){
 		puts("Could not open the file.");
 		MPI_Finalize();
@@ -76,7 +85,9 @@ int main(int argc, char **argv){
 	if (rank == 0){
 		double y = ti.getElapsedTime();
 		printf("Time 4 core: %.5f\n", y);
-		output(a, n);
+		if (OUTPUT != 0){
+			output(a, n);
+		}
 	}
 	return 0;
 }
@@ -90,7 +101,7 @@ int printArray(int *p, int n){
 }
 
 int output(int *p, int n){
-	FILE *f=fopen("output-merge-sort-mpi.txt", "wt");
+	FILE *f=fopen(fo, "wt");
 	int i;
 	for(i=0; i<n; i++)
 		fprintf(f, "%i\n", p[i]);
