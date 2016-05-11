@@ -1,9 +1,8 @@
 =====
-# Bài tập lớn Lập trình song song
-
+Bài tập lớn Lập trình song song
+===============================
 Integrate parallel computing in merge sort algorithm
-
-=====
+----------------------------------------------------
 
 ## Install MPI
 	$ sudo apt-get install libcr-dev mpich2 mpich2-doc
