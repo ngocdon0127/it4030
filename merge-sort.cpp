@@ -30,7 +30,8 @@ int main(void){
 	// printArray(a, n);
 	double y = ti.getElapsedTime();
 	printf("Time 1 core: %.5f\n", y);
-	output(a, n);
+	// output(a, n);
+	free(a);
 	return 0;
 }
 

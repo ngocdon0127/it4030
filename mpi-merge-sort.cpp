@@ -88,6 +88,7 @@ int main(int argc, char **argv){
 		if (OUTPUT != 0){
 			output(a, n);
 		}
+		free(a);
 	}
 	return 0;
 }
