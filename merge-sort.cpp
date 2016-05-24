@@ -62,11 +62,13 @@ int mergeSort(int *a, int left, int right){
 }
 
 int merge(int *a, int left, int mid, int right){
-	int *tmp = (int*) calloc(right + 1, sizeof(int));
+	int count = right - left + 1;
+	int *tmp = (int*) calloc(count, sizeof(int));
 	int i = left;
 	int j = mid + 1;
 	int k;
-	for(k = left; k <= right; k++){
+
+	for(k = 0; k < count; k++){
 		if (i > mid){
 			tmp[k] = a[j];
 			j++;
@@ -84,7 +86,7 @@ int merge(int *a, int left, int mid, int right){
 			j++;
 		}
 	}
-	for(k = left; k <= right; k++)
+	for(k = 0; k < count; k++)
 		a[k] = tmp[k];
 	free(tmp);
 }

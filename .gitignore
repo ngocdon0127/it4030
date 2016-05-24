@@ -1,3 +1,9 @@
 output*.txt
 mpi-merge-sort
 merge-sort
+generate-array
+input-merge-sort.txt
+*.mp4
+*.odp
+*.pdf
+*.pptx
