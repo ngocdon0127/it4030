@@ -87,7 +87,7 @@ int merge(int *a, int left, int mid, int right){
 		}
 	}
 	for(k = 0; k < count; k++)
-		a[k] = tmp[k];
+		a[left + k] = tmp[k];
 	free(tmp);
 }
 
